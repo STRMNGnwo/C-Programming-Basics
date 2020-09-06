@@ -1,0 +1,35 @@
+
+#include <stdio.h>
+
+int main()//only works if the array is in sorted order.
+{
+    int array[]={1,2,4,4,6,8};
+    int sum;
+    int size=(sizeof(array)/sizeof(int));
+    int high=size-1;
+    int low=0;
+    printf("Enter the sum you want combinations for:\n ");
+    scanf("%d",&sum);
+    
+    while(low<high)
+    {
+        if(array[low]+array[high]==sum)
+        {
+            printf("Combination found: %d + %d\n",array[low],array[high]);
+            low++;
+        }
+        else if( sum<(array[low]+array[high]) )
+        {
+            high--;
+            
+        }
+        else if(sum>(array[low]+array[high]))
+        {
+            low++;
+        }
+    }
+    printf("Hello, World!\n");
+    
+    return 0;
+    
+}
