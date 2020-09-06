@@ -10,7 +10,7 @@
 void Modify(int size,char *s)
 {
     char *original;//when the pointer is created it has nothing(no memory location) to point to
-    original=malloc(sizeof(char) * size);//memory is allocated for original to point to. This allows a copy of name to be made and the changes made to user input by s  will not be reflected on original.
+    original=malloc(sizeof(char) * size);//memory is allocated for original to point to. This allows a copy of name(user input) to be made and the changes, made to user input which are reflected on s, will not be reflected on original.
     strcpy(original,s);
     
     int i=0;
